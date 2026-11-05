@@ -14,3 +14,14 @@
 // Run: node ex03.js
 
 // write your code here
+function repeat(times) {
+if (times < 0) {
+console.log("Time's up!");
+return; // stop condition
+}
+console.log(String(times));
+setTimeout(() => repeat(times - 1), 1000);
+}
+repeat(5);
+// random delay between 500 and 1500 ms:
+// const delay = 500 + Math.random() * 1000;
