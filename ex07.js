@@ -15,3 +15,16 @@ const fs = require("fs");
 const path = require("path");
 
 // write your code here
+const p=path.join(__dirname, 'backup')
+fs.access(p, fs.constants.F_OK, (err)=>{
+    if (err) {
+fs.mkdir(p, ()=>{
+    console.log("Folder created successfully.");
+    
+})}
+else{
+    console.log("Folder already exists.");
+    
+}
+
+})
