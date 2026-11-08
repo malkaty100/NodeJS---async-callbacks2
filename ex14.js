@@ -18,3 +18,23 @@
 // Run: node ex14.js
 
 // write your code here
+let delay=0
+let cnt=3
+setTimeout(()=>{
+delay=Math.floor(Math.random()*1000+500)
+console.log(String(cnt--));
+setTimeout(()=>{
+delay=Math.floor(Math.random()*1000+500)
+console.log(String(cnt--));
+setTimeout(()=>{
+delay=Math.floor(Math.random()*1000+500)
+console.log(String(cnt--));
+setTimeout(()=>{
+delay=Math.floor(Math.random()*1000+500)
+console.log(String(cnt--));
+console.log("Done!");
+
+},delay)
+},delay)
+},delay)
+},delay)
