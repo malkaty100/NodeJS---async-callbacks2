@@ -17,3 +17,20 @@ const path = require("path");
 const directoryPath = path.join(__dirname, "data-folder");
 
 // write your code here
+    let sum=0
+    fs.readdir(directoryPath, (err,data)=>{
+        let counter=data.length
+    data.forEach(i=>{
+    fs.lstat(path.join(directoryPath,i),(err,stats)=>{
+        if(stats.isFile()){
+           sum+=stats.size
+        }
+           counter--;
+        if(counter===0)
+        console.log(`Total size: ${sum} bytes`);
+    })
+    
+    })
+    
+        
+    })
