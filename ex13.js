@@ -12,3 +12,10 @@
 const os = require("os");
 
 // write your code here
+function times(callback){
+ callback(os.uptime())
+}
+times((time)=>{
+    console.log(`System uptime: ${time} seconds`);
+    
+})
